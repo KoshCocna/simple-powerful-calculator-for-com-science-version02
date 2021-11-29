@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title id="title">Bin-Dec-Hex Converter & Calculator</title>
+  <meta charset="utf-8"/>
+  <meta name="description" content="Bin-Dec-Hex converter & calculator"/>
+  <meta name="keywords" content="decimaltobinary,binarytodecimal,hexadecimaltodecimal,decimaltohexadecimal,binarytohexadecimal,hexadecimaltobinary"/>
+  <meta name="viewport" content="width=devive-width,initial-scale=1.0"/>
+  <link type="text/css" rel="stylesheet" href="css\converter.css">
+  <link rel="stylesheet" href="css\colorconvert.css">
+  <script src="javascript\main.js" charset="utf-8"></script>
+</head>
+<body id="body1" class="bgcolor1">
+  <div>
+    <div class="grid-container maincontainer bgcolor2">
+  <!-- converter -->
+      <h1 id="h1" class="h2F item1 textcolor1">Binary-Decimal-Hexadecimal converter</h1>
+
+        <div class="item2 textcolor3" style="margin-top:10px">
+          <label for="select1" class="textcolor1">From</label><br/>
+          <select class="textcolor2 bgcolor1" id="select1" name="unit1" onchange="convert()">
+              <option value="Binary">Binary</option>
+              <option value="Decimal">Decimal</option>
+              <option value="Hexadecimal">Hexadecimal</option>
+          </select>
+        </div>
+
+        <div class="item3 textcolor3" style="margin-top:10px">
+          <lable for="select2" class="textcolor1">To</lable><br/>
+          <select class="textcolor2 bgcolor1" id="select2" name="unit2" onchange="convert()">
+              <option value="Binary">Binary</option>
+              <option value="Decimal">Decimal</option>
+              <option value="Hexadecimal">Hexadecimal</option>
+          </select>
+        </div>
+
+      <div class="item4 textcolor1">
+          <lable id="lable1" for="input1">Enter Decimal number:</lable><br/>
+          <input class="bgcolor1 textcolor2" id="input1" type="text" onkeypress="return Onpress(event)" name="binary1"><sub id="sub1">2</sub>
+      </div>
+
+      <button id="btn1" class="button1 textcolor1" type="button" name="convert" onclick="takevalue()">Convert</button>
+      <button id="btn2" class="button2 textcolor1" type="button" name="reset" onclick="Reset()">Reset</button>
+      <button id="btn3" class="button3 textcolor1" type="button" name="swape" onclick="Swape()">Swape</button>
+
+      <div class="item5 textcolor1">
+        <label id="lable2" for="output1">Binary number:</label><br>
+        <textarea class="bgcolor1 textcolor2" id="output1" name="outpu1" rows="20" cols="40" readonly></textarea><sub id="sub2">2</sub>
+      </div>
+    </div>
+
+    <div class="grid-container maincontainer bgcolor2">
+         <!-- calculator -->
+         <h1 id="h1" class="h2F item1 textcolor1">Binary-Decimal-Hexadecimal Calculator</h1>
+
+         <div class="item2 textcolor3">
+           <lable for="select3" class="textcolor1">Expression Type</lable>
+           <select class="textcolor2 bgcolor1" id="select3" name="unit3" onchange="convertCal()">
+               <option value="Binary">Binary</option>
+               <option value="Decimal">Decimal</option>
+               <option value="Hexadecimal">Hexadecimal</option>
+           </select>
+         </div>
+   
+         <div class="item6 textcolor1">
+           <label id="lable3" for="output2">Enter Binary Expression:<br/><br>e.g. 110+(11*01.01)/10 or 101%10</label><br>
+           <input class="bgcolor1 textcolor2" id="input2" type="text" onkeypress="return OnpressCal(event)" name="binary1"><sub id="sub3">2</sub>
+         </div>
+   
+         <button id="btn4" class="button1 textcolor1" type="button" name="result" onclick="solve()">Result</button>
+         <button id="btn5" class="button2 textcolor1" type="button" name="reset" onclick="ResetCal()">Reset</button>
+   
+         <div class="item7 textcolor1">
+           <label for="output2">Result:</label><br>
+           <textarea class="bgcolor1 textcolor2" id="output2" name="outpu2" rows="20" cols="40" readonly></textarea><sub id="sub4">2</sub>
+         </div>
+    </div>
+
+    <div class="grid-container maincontainer bgcolor2">
+      <!-- Poly-calculator -->
+      <h1 id="h1" class="h2F item1 textcolor1">Polynomial Calculator</h1>
+
+
+      <div class="item5 textcolor1">
+        <label id="mylabel1" for="myoutput">Enter the base polynom: e.g. 11B or a3</label><br>
+        <input class="bgcolor1 textcolor2" id="myinput1" type="text">
+      </div>
+      
+      <div class="item5 textcolor1">
+        <label id="mylable2" for="myoutput">Enter the 1-st operand: e.g. F3 or 2c</label><br>
+        <input class="bgcolor1 textcolor2" id="myinput2" type="text">
+      </div>
+
+      <div class="item5 textcolor1">
+        <label id="mylable3" for="myoutput">Enter the 2-nd operand: e.g. F3 or 2c</label><br>
+        <input class="bgcolor1 textcolor2" id="myinput3" type="text">
+      </div>
+
+      <button id="btn6" class="button1 textcolor1" type="button" name="result" onclick="multiply()">&#8727;</button>
+      <button id="btn7" class="button2 textcolor1" type="button" name="result" onclick="plus()">&#8853;</button>
+      <button id="btn8" class="button3 textcolor1" type="button" name="result" onclick="ResetCalmy()">Reset</button>
+ 
+      <div class="item7 textcolor1">
+        <label for="myoutput">Result:</label><br>
+        <textarea class="bgcolor1 textcolor2" id="myoutput" name="outpu2" rows="20" cols="40" readonly></textarea>
+      </div>
+ </div>
+
+    <div class="text-bottom">
+      <p>This is a powerful & simple calculator for computer science.</p> 
+    </div>
+   
+  </div>
+</body>
+</html>
